@@ -2,6 +2,7 @@ package main
 
 import (
 	"log"
+
 	"gocv.io/x/gocv"
 )
 
@@ -16,7 +17,7 @@ func webcam() {
 	defer img.Close()
 
 	window := gocv.NewWindow("brio")
-	defer window.Close();
+	defer window.Close()
 
 	for {
 		if ok := webcam.Read(&img); !ok || img.Empty() {
